@@ -14,7 +14,7 @@ import React from "react";
 
 const about = {
     title: 'About me',
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt ut aliquip ex ea.",
+    description: "Passionate about leveraging technology to create impactful solutions, I strive to innovate and inspire through my work in software development.",
     info: [
         {
             fieldName: "Name",
@@ -48,7 +48,7 @@ const about = {
 const experience = {
     icon: '/assets/resume/badge.svg',
     title: 'My experience',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt ut aliquip ex ea.',
+    description: 'Crafting digital experiences that blend creativity and functionality, shaping meaningful interactions through code.',
     items: [
         {
             company: "Wells Fargo",
@@ -73,7 +73,7 @@ const experience = {
 const education = {
     icon: '/assets/resume/cap.svg',
     title: 'My education',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt ut aliquip ex ea.',
+    description: 'Dedicated and results-driven professional with a solid foundation in Computer Science, holding a Bachelor\'s from NIT Kurukshetra.',
     items: [
         {
             institution: "NIT Kurukshetra",
@@ -100,7 +100,7 @@ const education = {
 
 const skills = {
     title: "My skills",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt ut aliquip ex ea.",
+    description: "Proficient in a diverse range of technologies and frameworks, with expertise in web development, data analysis, and software engineering, ensuring versatile and adaptable solutions.",
     skillList: [
         {
             icon: <FaJava/>,

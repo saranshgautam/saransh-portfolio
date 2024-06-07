@@ -9,25 +9,25 @@ const services = [
     {
         num: '01',
         title: 'Web Development',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. eiusmod tempo Ut enim ad minim veniam.',
+        description: 'Crafting responsive and dynamic web applications tailored to your unique business needs, ensuring a seamless user experience across all devices.',
         href: '/'
     },
     {
         num: '02',
-        title: 'UI/UX Design',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. eiusmod tempo Ut enim ad minim veniam.',
+        title: 'API Development',
+        description: 'Building robust and scalable APIs to facilitate seamless communication between different systems and services, enabling efficient data exchange and integration.',
         href: '/'
     },
     {
         num: '03',
-        title: 'Logo Design',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. eiusmod tempo Ut enim ad minim veniam.',
+        title: 'Database Design',
+        description: 'Designing optimized database architectures and implementing efficient data storage solutions, ensuring reliability, scalability, and performance.',
         href: '/'
     },
     {
         num: '04',
-        title: 'SEO',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. eiusmod tempo Ut enim ad minim veniam.',
+        title: 'Backend Testing',
+        description: 'Implementing comprehensive testing strategies and quality assurance processes to ensure the reliability, security, and performance of backend systems and applications.',
         href: '/'
     },
 ]
