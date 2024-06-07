@@ -39,9 +39,9 @@ const Contact = () => {
                     {/* form */}
                     <div className="xl:w-[54%] order-2 xl:order-none">
                         <form className="flex flex-col gap-6 p-10 bg-[#0b0c10] rounded-xl">
-                            <h3 className="text-4xl text-accent">Let's work together</h3>
+                            <h3 className="text-4xl text-accent">Let's collaborate </h3>
                             <p className="text-white/60">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt ut aliquip ex ea.
+                                and bring your vision to life! Connect with me through the form below to discuss how we can work together on your next project.
                             </p>
                             {/* input */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -59,14 +59,18 @@ const Contact = () => {
                                     <SelectGroup>
                                         <SelectLabel>Select a service</SelectLabel>
                                         <SelectItem value="est">Web Development</SelectItem>
-                                        <SelectItem value="cst">UI/UX Design</SelectItem>
-                                        <SelectItem value="mst">Logo Design</SelectItem>
+                                        <SelectItem value="cst">API Development</SelectItem>
+                                        <SelectItem value="mst">Database Design</SelectItem>
+                                        <SelectItem value="lst">Backend Testing</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
 
                             {/* Textarea */}
-                            <Textarea className="h-[200px]" placeholder="Type your message here."/>
+                            <div className="w-full gap-6 grid">
+                                <Textarea className="h-[200px]" placeholder="Type your message here."/>
+                                <Input type="file" multiple/>
+                            </div>
 
                             {/* Button */}
                             <Button size="md" className="max-w-40">Send message</Button>
