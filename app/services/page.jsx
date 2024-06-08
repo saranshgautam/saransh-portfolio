@@ -10,25 +10,25 @@ const services = [
         num: '01',
         title: 'Web Development',
         description: 'Crafting responsive and dynamic web applications tailored to your unique business needs, ensuring a seamless user experience across all devices.',
-        href: '/'
+        href: '/contact'
     },
     {
         num: '02',
         title: 'API Development',
         description: 'Building robust and scalable APIs to facilitate seamless communication between different systems and services, enabling efficient data exchange and integration.',
-        href: '/'
+        href: '/contact'
     },
     {
         num: '03',
         title: 'Database Design',
         description: 'Designing optimized database architectures and implementing efficient data storage solutions, ensuring reliability, scalability, and performance.',
-        href: '/'
+        href: '/contact'
     },
     {
         num: '04',
         title: 'Backend Testing',
         description: 'Implementing comprehensive testing strategies and quality assurance processes to ensure the reliability, security, and performance of backend systems and applications.',
-        href: '/'
+        href: '/contact'
     },
 ]
 

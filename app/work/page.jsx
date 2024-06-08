@@ -17,38 +17,30 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "Banking application",
     title: "project 1",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt ut aliquip ex ea",
-    stack: [{ name: "Html 5" }, { name: "CSS 3" }, { name: "Javascript" }],
+      "A comprehensive banking application project that models transaction processes with a user-friendly interface.",
+    stack: [{ name: "ReactJS" }, { name: "Springboot" }, { name: "MySQL" }],
     image: "/assets/work/thumb1.png",
     live: "",
-    github: "",
+    github: "https://github.com/saranshgautam/banking-application",
+    explaination: "Developed a full-stack banking application utilizing ReactJS for the frontend, Spring Boot for the backend, and MySQL for the database. The application offers comprehensive user functionalities, including applying for bank accounts and net banking, performing money transactions, withdrawals, deposits, and viewing transaction history. Admin capabilities include approving user applications, monitoring all user transactions, withdrawals, deposits, and managing user accounts and balances. This robust system ensures secure and efficient banking operations for both users and administrators."
   },
   {
     num: "02",
-    category: "fullstack",
+    category: "Employee management app",
     title: "project 2",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt ut aliquip ex ea",
-    stack: [{ name: "ReactJS" }, { name: "Next.js" }, { name: "TypeScript" }],
+      "An employee management dashboard that empowers admins with a seamless interface for efficiently managing employee records.",
+    stack: [{ name: "ReactJS" }, { name: "Springboot" }, { name: "MySQL" }],
     image: "/assets/work/thumb2.png",
     live: "",
-    github: "",
-  },
-  {
-    num: "03",
-    category: "frontend",
-    title: "project 3",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt ut aliquip ex ea",
-    stack: [{ name: "Html 5" }, { name: "CSS 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb3.png",
-    live: "",
-    github: "",
+    github: "https://github.com/saranshgautam/employee-management",
+    explaination: "Developed an employee management dashboard using ReactJS, Spring Boot, and MySQL. This application allows admins to efficiently add, remove, and edit employee information, including phone numbers, emails, and department assignments. The system provides a user-friendly interface for managing employee records and ensures accurate and secure data handling. This tool streamlines administrative tasks, enhancing organizational efficiency and data integrity."
   },
 ];
+
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
@@ -56,6 +48,11 @@ const Work = () => {
     const currentIndex = swiper.activeIndex;
     setProject(projects[currentIndex])
   }
+  const [isOpen, setIsOpen] = useState(false);
+
+    const toggleModal = () => {
+        setIsOpen(!isOpen);
+    };
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -72,7 +69,7 @@ const Work = () => {
               </div>
               {/* project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.category}
               </h2>
 
               {/* description */}
@@ -93,21 +90,50 @@ const Work = () => {
                 {/* buttons */}
                 <div className="flex gap-4">
                     {/* live project button */}
-                    <Link href={project.github}>
+                    {/* <Link href={project.github}> */}
                         <TooltipProvider delayDuration={100}>
                             <Tooltip>
-                                <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                                <TooltipTrigger onClick={toggleModal} className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                                     <BsArrowUpRight className="text-white text-3xl group-hover:text-accent"/>
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                    <p>Live project</p>
+                                  <p>Project Description</p>
                                 </TooltipContent>
+                                {isOpen && (
+                                  <div className="fixed inset-0 flex items-center justify-center z-50">
+                                      <div className="fixed inset-0 bg-primary opacity-75"></div>
+                                      <div className="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
+                                          <div className="bg-[#232329] px-4 py-5 sm:px-6 flex justify-between items-center">
+                                              <h3 className="text-lg leading-6 font-medium text-white">Project Description</h3>
+                                              <button
+                                                  className="text-white focus:outline-none"
+                                                  onClick={toggleModal}
+                                              >
+                                                  &times;
+                                              </button>
+                                          </div>
+                                          <div className="px-4 py-5 sm:p-6 bg-primary">
+                                              <p className="text-white/60">{project.explaination}</p>
+                                          </div>
+                                          <div className="bg-primary px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                                              <button
+                                                  type="button"
+                                                  className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-accent text-primary hover:bg-accent-hover font-medium focus:outline-none sm:ml-3 sm:w-auto sm:text-sm"
+                                                  onClick={toggleModal}
+                                              >
+                                                  Close
+                                              </button>
+                                          </div>
+                                      </div>
+                                  </div>
+                                )}
                             </Tooltip>
                         </TooltipProvider>
-                    </Link>
+                    {/* </Link> */}
 
                     {/* github project button */}
-                    <Link href={project.live}>
+                    <Link href={project.github} legacyBehavior>
+                    <a target="_blank" rel="noopener noreferrer">
                         <TooltipProvider delayDuration={100}>
                             <Tooltip>
                                 <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -118,6 +144,8 @@ const Work = () => {
                                 </TooltipContent>
                             </Tooltip>
                         </TooltipProvider>
+
+                    </a>
                     </Link>
                 </div>
             </div>
@@ -138,7 +166,7 @@ const Work = () => {
                                 <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
 
                                 {/* image */}
-                                <div className="relative w-full h-full">
+                                <div className="relative w-full h-full bg-accent">
                                     <Image 
                                         src={project.image}
                                         fill

@@ -7,6 +7,7 @@ import {Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigg
 import {FaPhoneAlt, FaEnvelope, FaMapMarkedAlt, FaMapMarkerAlt} from "react-icons/fa"
 import { Description } from "@radix-ui/react-dialog";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const info = [
     {
@@ -27,6 +28,11 @@ const info = [
 ]
 
 const Contact = () => {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const togglePopup = () => {
+        console.log("function called")
+        setIsPopupOpen(!isPopupOpen);
+    };
     return (
         <motion.section
             initial={{ opacity: 0 }}
@@ -73,9 +79,38 @@ const Contact = () => {
                             </div>
 
                             {/* Button */}
-                            <Button size="md" className="max-w-40">Send message</Button>
-
+                            <Button size="md" className="max-w-40" onClick={togglePopup} type="button">Send message</Button>
                         </form>
+                        {isPopupOpen && (
+                            <div className="fixed inset-0 flex items-center justify-center z-50">
+                                <div className="fixed inset-0 bg-primary opacity-75"></div>
+                                <div className="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
+                                    <div className="bg-[#232329] px-4 py-5 sm:px-6 flex justify-between items-center">
+                                        <h3 className="text-lg leading-6 font-medium text-white">Notice</h3>
+                                        <button
+                                            className="text-white focus:outline-none"
+                                            onClick={togglePopup}
+                                        >
+                                            &times;
+                                        </button>
+                                    </div>
+                                    <div className="px-4 py-5 sm:p-6 bg-primary">
+                                        <p className="text-white/60">
+                                        Oops! This feature is currently encountering some difficulties. Rest assured, I'm actively addressing them. In the meantime, feel free to reach out to me via the mobile number or email listed here.
+                                        </p>
+                                    </div>
+                                    <div className="bg-primary px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                                        <button
+                                            type="button"
+                                            className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-accent text-primary hover:bg-accent-hover font-medium focus:outline-none sm:ml-3 sm:w-auto sm:text-sm"
+                                            onClick={togglePopup}
+                                        >
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
 
                     {/* info */}
