@@ -52,7 +52,7 @@ const experience = {
     items: [
         {
             company: "Wells Fargo",
-            position: "Program Associate (AVP)",
+            position: "Software Engineer (AVP)",
             duration: "Aug 2023 - Present"
         },
         {
