@@ -17,24 +17,36 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "Banking application",
+    category: "AI based SaaS platform",
     title: "project 1",
+    description:
+      "A SaaS based application that harness the power of third party APIs to deliver advanced AI capabilities.",
+    stack: [{ name: "NextJS" }, { name: "MongoDB" }, { name: "Stripe" }, {name: "Clerk"}],
+    image: "/assets/work/thumb1.png",
+    live: "https://imaginify-three-psi.vercel.app/",
+    github: "https://github.com/saranshgautam/imaginify",
+    explaination: "Architected a scalable AI-based SaaS platform, leveraging third-party APIs to deliver advanced AI capabilities utilizing NextJS - frontend, MongoDB - database, Stripe - payment integration, and Clerk - user authentication. This robust system enables user to perform AI based operation on images like generative fill, background remove, object remove etc. The live version of this can be found at https://imaginify-three-psi.vercel.app/"
+  },
+  {
+    num: "02",
+    category: "Banking application",
+    title: "project 2",
     description:
       "A comprehensive banking application project that models transaction processes with a user-friendly interface.",
     stack: [{ name: "ReactJS" }, { name: "Springboot" }, { name: "MySQL" }],
-    image: "/assets/work/thumb1.png",
+    image: "/assets/work/thumb2.png",
     live: "",
     github: "https://github.com/saranshgautam/banking-application",
     explaination: "Developed a full-stack banking application utilizing ReactJS for the frontend, Spring Boot for the backend, and MySQL for the database. The application offers comprehensive user functionalities, including applying for bank accounts and net banking, performing money transactions, withdrawals, deposits, and viewing transaction history. Admin capabilities include approving user applications, monitoring all user transactions, withdrawals, deposits, and managing user accounts and balances. This robust system ensures secure and efficient banking operations for both users and administrators."
   },
   {
-    num: "02",
+    num: "03",
     category: "Employee management app",
-    title: "project 2",
+    title: "project 3",
     description:
       "An employee management dashboard that empowers admins with a seamless interface for efficiently managing employee records.",
     stack: [{ name: "ReactJS" }, { name: "Springboot" }, { name: "MySQL" }],
-    image: "/assets/work/thumb2.png",
+    image: "/assets/work/thumb3.png",
     live: "",
     github: "https://github.com/saranshgautam/employee-management",
     explaination: "Developed an employee management dashboard using ReactJS, Spring Boot, and MySQL. This application allows admins to efficiently add, remove, and edit employee information, including phone numbers, emails, and department assignments. The system provides a user-friendly interface for managing employee records and ensures accurate and secure data handling. This tool streamlines administrative tasks, enhancing organizational efficiency and data integrity."
