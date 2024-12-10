@@ -16,7 +16,7 @@ const stats = [
         text: "leetcode problems",
     },
     {
-        num: 652,
+        num: 800,
         text: "gfg score"
     }
 ]
